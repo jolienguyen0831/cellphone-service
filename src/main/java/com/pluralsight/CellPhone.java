@@ -1,7 +1,9 @@
 package com.pluralsight;
 
+import java.lang.invoke.StringConcatFactory;
+
 public class CellPhone {
-    private int serialNumber;
+    private String serialNumber;
     private String model;
     private String carrier;
     private String phoneNumber;
@@ -10,11 +12,11 @@ public class CellPhone {
     public CellPhone(){
     }
 
-    public int getSerialNumber() {
+    public String getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(int serialNumber) {
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 
@@ -48,5 +50,9 @@ public class CellPhone {
 
     public void setOwner(String owner) {
         this.owner = owner;
+    }
+
+    public void dial(String phoneNumber, String owner){
+        System.out.printf("%n%s's phone is calling %s",owner, phoneNumber);
     }
 }
