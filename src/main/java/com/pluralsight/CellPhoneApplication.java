@@ -7,15 +7,18 @@ public class CellPhoneApplication {
         Scanner input = new Scanner(System.in);
         CellPhone cellPhone1 = new CellPhone();
         CellPhone cellPhone2 = new CellPhone();
+        CellPhone cellPhone3 = new CellPhone("1234","Android","Mint","214478973","Jen");
 
         createCellPhone(input, cellPhone1);
         createCellPhone(input, cellPhone2);
 
         displayCellPhone(cellPhone1);
         displayCellPhone(cellPhone2);
+        displayCellPhone(cellPhone3);
 
         cellPhone1.dial(cellPhone2.getPhoneNumber(), cellPhone2.getOwner());
         cellPhone2.dial(cellPhone1.getPhoneNumber(), cellPhone1.getOwner());
+        cellPhone3.dial(cellPhone3.getPhoneNumber(), cellPhone1.getOwner());
     }
 
     private static void createCellPhone(Scanner input, CellPhone cellPhone1) {
